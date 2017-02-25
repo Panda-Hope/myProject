@@ -11,8 +11,8 @@ var Array.from = Array.from || (function () {
         return [start, end];
     };
 
-    return function(arr, start, end) {
-        var arr = Array.from(arr),
+    return function(start, end) {
+        var arr = Array.from(this),
             len = arr.length,
             interval = getInterval(start, end, len);
 
