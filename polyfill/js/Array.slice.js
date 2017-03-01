@@ -1,4 +1,4 @@
-var Array.from = Array.from || (function () {
+Array.prototype.from = Array.prototype.from || (function () {
     var getPoint = function(point, len) {
         point = Math.floor(point);
         return isNaN(point) ? 0 : (point < 0 ? (+point > len ? 0 : len + point) : (point > len ? len : point));
