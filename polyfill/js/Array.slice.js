@@ -3,7 +3,7 @@ Array.prototype.from = Array.prototype.from || (function () {
         point = Math.floor(point);
         return isNaN(point) ? 0 : (point < 0 ? (+point > len ? 0 : len + point) : (point > len ? len : point));
     };
-
+    
     var getInterval = function(start, end, len) {
         start = start == null ? 0 : getPoint(start, len);
         end = end == null ? len : getPoint(end, len);
