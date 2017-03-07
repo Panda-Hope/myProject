@@ -2,7 +2,7 @@ Array.prototype.from = Array.prototype.from || (function () {
     var getPoint = function(point, len) {
         return point >= 0 ? Math.min(point, len) : Math.max(point+len, 0);
     };
-         
+            
     var getInterval = function(start, end, len) {
         var relativeLength = len >>> 0,
             relativeStart = start >> 0,
