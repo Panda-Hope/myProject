@@ -1,4 +1,4 @@
-Array.prototype.find = Array.find || function(fn, thisArg) {
+Array.prototype.forEach = Array.forEach || function(fn, thisArg) {
     var o = Object(this),
         len = o.length >>> 0,
         fnType = typeof fn;
@@ -6,10 +6,10 @@ Array.prototype.find = Array.find || function(fn, thisArg) {
     if (fnType !== 'function') {
         throw new TypeError(fnType + " is not a function");
     }
-    
-    for (var i=0;i<len;i++) {
-        if (fn.call(thisArg, o[i], i, o)) {
-            return o[i];
+
+    for (var item in o) {
+        if (o.hasOwnProperty(item)) {
+            fn.call(thisArg, o[item], item, o);
         }
     }
 };
