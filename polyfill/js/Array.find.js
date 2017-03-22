@@ -1,4 +1,4 @@
-Array.prototype.find = Array.find || function(fn, thisArg) {
+Array.prototype.find = Array.prototype.find || function(fn, thisArg) {
     var o = Object(this),
         len = o.length >>> 0,
         fnType = typeof fn;

@@ -1,4 +1,4 @@
-Array.prototype.forEach = Array.forEach || function(fn, thisArg) {
+Array.prototype.forEach = Array.prototype.forEach || function(fn, thisArg) {
     var o = Object(this),
         len = o.length >>> 0,
         fnType = typeof fn;
